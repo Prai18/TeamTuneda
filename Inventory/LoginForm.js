@@ -105,6 +105,16 @@ hash(email,password){   //ログインが成功したときに呼ばれ、個別
     )
   }
 
+  changeEmail = (text) => {                //TextInputでemailの入力
+       this.setState({ email: text})
+    }
+
+
+  changePassword = (text) => {                 //TextInputでpasswordの入力
+    this.setState({password:text})
+  }
+
+
   render() {
     return (
       <View>
@@ -113,7 +123,7 @@ hash(email,password){   //ログインが成功したときに呼ばれ、個別
               placeholder="user@gmail.com"
               autoCorrect={false}
               value={this.state.email}
-              onChangeText={email => this.setState({ email })}
+              onChangeText={this.changeEmail}
             />
         </View>
         <View style={styles.wrap}>
@@ -122,7 +132,7 @@ hash(email,password){   //ログインが成功したときに呼ばれ、個別
               placeholder="password"
               autoCorrect={false}
               value={this.state.password}
-              onChangeText={password => this.setState({ password })}
+              onChangeText={this.changePassword}
             />
         </View>
 

@@ -51,7 +51,7 @@ state = {
 };
 
 firestoreInput = () =>{                    //データベースへの入力
-const user="kkkk";
+const user="users";
   db.collection(user).add({
       name:this.state.name,
       num: this.state.num,
